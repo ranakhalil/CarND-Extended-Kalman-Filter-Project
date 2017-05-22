@@ -53,6 +53,12 @@ public:
   void Predict();
 
   /**
+  * General update function that recieves a different y value 
+  * depending on the sensor data provided (Laser or Radar).
+  **/
+  void UpdateKF(const Eigen::VectorXd &y);
+
+  /**
    * Updates the state by using standard Kalman Filter equations
    * @param z The measurement at k+1
    */
